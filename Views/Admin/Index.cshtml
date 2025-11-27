@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProjectNew.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Danh sách bài viết</h2>
+
+<form method="get" style="margin-bottom: 16px;">
+    <input type="text" name="search" placeholder="Tìm kiếm tiêu đề..." />
+    <button>Tìm</button>
+</form>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>ID</th>
+        <th>Tiêu đề</th>
+        <th>Ngày đăng</th>
+        <th>Hành động</th>
+    </tr>
+
+    @foreach (var t in Model)
+    {
+        <tr>
+            <td>@t.NewsId</td>
+            <td>@t.Header</td>
+            <td>@t.Posted.ToString()</td>
+            <td>
+                <a href="/Admin/Edit/@t.NewsId">Sửa</a> |
+                <a href="/Admin/Delete/@t.NewsId">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

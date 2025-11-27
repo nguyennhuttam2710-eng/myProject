@@ -1,0 +1,24 @@
+﻿@model ProjectNew.Models.User
+
+@{
+    ViewBag.Title = "LoginUser";
+    Layout = "~/Views/Shared/_LayoutTrangChu.cshtml";
+}
+<h2 style="color:#ff7a18; margin-bottom: 16px; background-color:white">Đăng nhập người dùng</h2>
+<div style="background-color:#f7ceb3; width:200px; height:200px; border:double; border-radius:5px; border-color:orangered">
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red">@ViewBag.Error</p>
+    }
+
+    <form method="post" class="login-form">
+        <label>Email</label>
+        <input type="email" name="email" required />
+        <br />
+        <label>Mật khẩu</label>
+        <input type="password" name="password" required />
+        <br />
+        <button class="btn-login">Đăng nhập</button>
+    </form>
+</div>
+

@@ -1,0 +1,20 @@
+﻿@model ProjectNew.Models.News
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Tạo bài viết mới</h2>
+
+<form method="post">
+    <label>Tiêu đề</label>
+    <input type="text" name="Header" required />
+
+    <label>Nội dung</label>
+    <textarea name="Content" rows="6" required></textarea>
+
+    <br />
+    <button>Tạo bài viết</button>
+</form>
+

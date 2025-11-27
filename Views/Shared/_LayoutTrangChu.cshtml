@@ -1,0 +1,58 @@
+﻿@*W01-26*@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - N-News</title>
+    <meta name="keywords" content="tin tức, thời sự, công nghệ, giải trí, thể thao, kinh tế, đời sống, giáo dục, sức khỏe" />
+    <meta name="description" content="Cập nhật tin tức mới nhất mỗi ngày" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="~/Content/myStyle/StyleTrangChu.css" rel="stylesheet" />
+</head>
+<body class="page-container">
+    <div class="site-header" style="background-color: #fad1ae">
+        <div class="container header-inner">
+            <div class="brand" style="background-color:#fff; border:double; border-color:black; border-radius:20px">
+                <div class="logo" style="font-size:100px; font-weight:700">TIN TỨC</div>
+            </div>
+        </div>
+        <div class="main-nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="~/TrangChu/TrangChu">Trang chủ</a></li>
+                <li class="nav-item"><a href="~/TrangChu/ThoiSu">Thời sự</a></li>
+                <li class="nav-item"><a href="~/TrangChu/CongNghe">Công nghệ</a></li>
+                <li class="nav-item"><a href="~/TrangChu/GiaiTri">Giải trí</a></li>
+                <li class="nav-item"><a href="~/TrangChu/TheThao">Thể thao</a></li>
+                <li class="nav-item"><a href="~/TrangChu/KinhTe">Kinh tế</a></li>
+                <li class="nav-item"><a href="~/TrangChu/DoiSong">Đời sống</a></li>
+                <li class="nav-item"><a href="~/TrangChu/GiaoDuc">Giáo dục</a></li>
+                <li class="nav-item"><a href="~/TrangChu/SucKhoe">Sức khỏe</a></li>
+                <li class="nav-item"><a class="login-link" href="~/Account/LoginUser">Đăng nhập người dùng</a></li>
+                <li class="nav-item"><a class="login-link" href="~/AdminAcc/Login">Đăng nhập quản trị</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="site-main">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div class="site-footer" style="background-color: #fad1ae">
+        <div class="container footer-inner">
+            <div class="footer-contact">
+                <h4>Liên hệ</h4>
+                <p><i class="fa-solid fa-f"></i><a href="https://www.facebook.com/" target="_blank"> Facebook.com</a></p>
+                <p><i class="fa-solid fa-phone-volume"></i><a href="https://chat.zalo.me/"> +84 987 654 321</a></p>
+                <p><i class="fa-solid fa-envelope"></i><a href="https://mail.google.com/"> abc@email.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

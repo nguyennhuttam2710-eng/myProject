@@ -1,0 +1,22 @@
+﻿@model ProjectNew.Models.News
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Sửa bài viết</h2>
+
+<form method="post">
+    <input type="hidden" name="NewsId" value="@Model.NewsId" />
+
+    <label>Tiêu đề</label>
+    <input type="text" name="Header" value="@Model.Header" required />
+
+    <label>Nội dung</label>
+    <textarea name="Content" rows="6" required>@Model.Content</textarea>
+
+    <br />
+    <button>Lưu thay đổi</button>
+</form>
+

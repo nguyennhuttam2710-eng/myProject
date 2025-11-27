@@ -1,0 +1,59 @@
+﻿@model List<ProjectNew.Models.News>
+
+@{
+    ViewBag.Title = "TrangChu";
+    Layout = "~/Views/Shared/_LayoutTrangChu.cshtml";
+}
+
+<h2 style="color:#ff7a18; margin-bottom: 12px;">Tin tức mới nhất</h2>
+
+
+<form action="/TrangChu/TrangChu" class="search-form" method="get" style="margin-bottom: 16px;">
+    <input type="text"
+           name="search"
+           placeholder="Tìm kiếm..."
+           value="@Request["search"]"
+           class="search-input" />
+
+    <button type="submit" class="btn">Tìm</button>
+    <a class="login-link" href="/Save/SavedList">Bài viết đã lưu</a>
+</form>
+
+@if (Model == null)
+{
+    <p>Không tìm thấy bài viết nào.</p>
+}
+else
+{
+    <div class="article-list">
+        @foreach(var item in Model) 
+        {
+            <div class="article-card">
+                <h3>@item.Header</h3>
+
+                <p>
+                    @if (item.Posted.HasValue)
+                    {
+                        @item.Posted.Value.ToString("dd/MM/yyyy")
+                    }
+                    else
+                    {
+                        <text>Chưa có ngày đăng</text>
+                    }
+                </p>
+
+                <!-- Đọc chi tiết -->
+                <a class="read-more" href="/TrangChu/Detail/@item.NewsId">
+                    Đọc bài
+                </a>
+
+                <!-- Lưu bài -->
+                <a href="/Save/Save/@item.NewsId"
+                   style="color:#ff7a18; font-size:14px; margin-top:4px;">
+                    Lưu bài viết
+                </a>
+            </div>
+        }
+    </div>
+}
+

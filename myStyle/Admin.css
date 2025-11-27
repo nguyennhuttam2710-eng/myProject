@@ -1,0 +1,116 @@
+﻿body {
+}
+
+.header {
+    background: #ff7a18;
+    color: #fff;
+    padding: 16px;
+}
+
+.hd2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+    .nav {
+        margin-top: 10px;
+    }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 12px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+
+main {
+    padding: 20px;
+}
+
+
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    background: white;
+}
+
+form button {
+    background: #ff7a18;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+    form button:hover {
+        opacity: 0.9;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    table th {
+        background: #ff7a18;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    table td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    table tr:hover {
+        background: #fff6ef;
+    }
+
+    table a {
+        text-decoration: none;
+        color: #ff7a18;
+        font-weight: bold;
+    }
+
+        table a:hover {
+            text-decoration: underline;
+        }
+
+
+
+button.delete-btn {
+    background: red;
+}
+
+    button.delete-btn:hover {
+        opacity: 0.85;
+    }
+

@@ -1,0 +1,16 @@
+﻿@model ProjectNew.Models.News
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xóa bài viết</h2>
+
+<p>Bạn có chắc muốn xóa bài viết: <strong>@Model.Header</strong>?</p>
+
+<form method="post">
+    <button style="color:white; background:red;">Xóa</button>
+    <a href="/Admin/Index">Hủy</a>
+</form>
+

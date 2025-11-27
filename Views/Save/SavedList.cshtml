@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ProjectNew.Models.News>
+
+@{
+    ViewBag.Title = "SavedList";
+    Layout = "~/Views/Shared/_LayoutTrangChu.cshtml";
+}
+
+<h2 style="color:#ff7a18;">Bài viết đã lưu</h2>
+
+@if (Model.Count() == 0)
+{
+    <p>Bạn chưa lưu bài viết nào.</p>
+}
+else
+{
+<div class="artical-list">
+    @foreach (var item in Model)
+    {
+        <div class="article-card">
+            <h3>@item.Header</h3>
+            <p>@item.Posted.ToString()</p>
+
+            <a class="read-more" href="/TrangChu/Detail/@item.NewsId">Đọc bài</a><br />
+
+            <a href="/Save/Remove/@item.NewsId" style="color:red; font-size:14px;">
+                Xóa khỏi danh sách lưu
+            </a>
+        </div>
+    }
+</div>
+}
+
